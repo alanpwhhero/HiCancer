@@ -1,11 +1,10 @@
 # HiCancer
 
-Description
-
+Description 
 HiCancer is a pipeline for phasing cancer genome. It uses Hi-C paired-end reads and called SNPs as input and outputs chromosome-level haplotypes ofcancer genome. HiCancer filtered somatic SNPs and phase the LOH regions in a correct way. At the same time, HiCancertakes advantage of allelic copy number imbalance in aneuploid regions and linkage disequilibrium information to improve thecompleteness and accuracy by assembling fragmented haplotypes, adding the lost SNPs back into haplotypes (imputation)and correcting the switching errors.
 
-Dependency
 
+Dependency 
 1. python
 The majoy part of HiCancer is written in Python, so Python has to be installed. Python2.7(or above) is suggested.
 2. samtools
@@ -22,12 +21,12 @@ http://hgdownload.soe.ucsc.edu/downloads.html#human
 7. 1000 genomic project vcf files
 https://www.internationalgenome.org/data
 
-Usage
 
+Usage 
 The whole pipeline is contained in HiCancer.sh. The users need to fill the first part ("input files") of HiCancer.sh which represent the all input files and parameters needed, and then run it. 
 
-Output
 
+Output 
 hapcutfile_filtered_beagleoutput_*.final gives the phased *th chromosme before completing step.
 The result of completing step is contained in chr*_phasing files. 
  
